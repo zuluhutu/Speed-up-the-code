@@ -1,13 +1,19 @@
 {
   "name": "Speed-up-the-code",
-  "build": {
-    "dockerfile": "Dockerfile"
+  "image": "mcr.microsoft.com/powershell:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils": {
+    },
+    "ghcr.io/devcontainers/features/powershell": {
+      "modules":[
+        "PSFramework",
+        "ImportExcel",
+        "Profiler"
+      ]
+    }
   },
-  "settings": {},
   "extensions": [
     "ms-vscode.powershell"
   ],
-  // Install and import modules
-  "postCreateCommand": "pwsh -Command \"Install-Module -Name PSFramework, ImportExcel, Profiler -Force -Scope AllUsers; Import-Module PSFramework; Import-Module ImportExcel; Import-Module Profiler\"",
   "remoteUser": "vscode"
 }
