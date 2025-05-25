@@ -1,0 +1,13 @@
+"name": "Speed-up-the-code",
+"image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+"features" : {
+    "ghcr.io/decontainers/features/common-utils:2":{
+    },
+    "ghcr.io/devcontainers/features/powershell:1.5.1": {
+        "modules":[
+            "PSFramework",
+            "ImportExcel",
+            "Profiler"
+        ]
+    }
+}
