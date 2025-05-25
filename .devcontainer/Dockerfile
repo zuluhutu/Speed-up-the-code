@@ -1,5 +1,8 @@
 FROM mcr.microsoft.com/powershell:latest
  
+# Install git
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+ 
 # Create a non-root user (VSC default practice)
 ARG USERNAME=vscode
 ARG USER_UID=1000
