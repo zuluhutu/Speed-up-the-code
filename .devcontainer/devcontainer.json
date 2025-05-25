@@ -7,6 +7,7 @@
   "extensions": [
     "ms-vscode.powershell"
   ],
-  "postCreateCommand": "pwsh -Command \"Install-Module -Name PSFramework, ImportExcel, Profiler -Force -Scope AllUsers\"",
+  // Install and import modules
+  "postCreateCommand": "pwsh -Command \"Install-Module -Name PSFramework, ImportExcel, Profiler -Force -Scope AllUsers; Import-Module PSFramework; Import-Module ImportExcel; Import-Module Profiler\"",
   "remoteUser": "vscode"
 }
